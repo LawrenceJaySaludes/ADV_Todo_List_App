@@ -3,7 +3,7 @@ import './App.css'
 import axios from 'axios'
 import TodoForm from './components/ToDoForm'
 import Table from './components/table'
-import { data } from 'autoprefixer'
+
 
 function App() {
 
@@ -31,10 +31,13 @@ function App() {
       <nav  className='pt-8'>
         <h1 className='text-5xl text-center pb-12'>ToDo List</h1>
       </nav>
-      <TodoForm />
+      <TodoForm
+      setTodos = {setTodos}
+      fetchData = {fetchData}
+      />
       <Table 
       todos={todos}
-      setTodos={setTodos}
+      setTodos = {setTodos}
       isLoading = {isLoading}
       />
 
